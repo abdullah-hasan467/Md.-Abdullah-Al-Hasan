@@ -767,6 +767,26 @@ main {
 .article-title { margin-bottom: 30px; }
 
 
+.download-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  background: var(--text-gradient-yellow);
+  color: #000;
+  font-weight: 500;
+  border-radius: 8px;
+  text-decoration: none;
+  margin-bottom: 25px;
+  transition: transform 0.3s ease;
+}
+
+.download-btn:hover {
+  transform: scale(1.05);
+}
+
+
+
 /**
  * education and experience 
  */
