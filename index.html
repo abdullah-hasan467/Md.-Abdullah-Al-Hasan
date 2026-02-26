@@ -1170,10 +1170,71 @@
 
             <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
 
-            <button class="form-btn" type="submit" disabled data-form-btn>
+            <!-- <button class="form-btn" type="submit" disabled data-form-btn>
               <ion-icon name="paper-plane"></ion-icon>
               <span>Send Message</span>
-            </button>
+            </button> -->
+
+<!-- Button -->
+<button class="form-btn" type="submit" id="sendBtn">
+  <ion-icon name="paper-plane"></ion-icon>
+  <span>Send Message</span>
+</button>
+
+<!-- Popup -->
+<div id="popup" class="popup">Message Sent!</div>
+
+<style>
+/* Popup styles */
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  background-color: rgba(49, 45, 45, 0.85);
+  color: #fff;
+  padding: 20px 40px;
+  border-radius: 10px;
+  font-size: 18px;
+  text-align: center;
+  z-index: 1000;
+  opacity: 0;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+/* Show popup */
+.popup.show {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+  animation: popBounce 0.6s ease;
+}
+
+/* Pop bounce animation */
+@keyframes popBounce {
+  0% { transform: translate(-50%, -50%) scale(0.5); }
+  50% { transform: translate(-50%, -50%) scale(1.2); }
+  70% { transform: translate(-50%, -50%) scale(0.9); }
+  100% { transform: translate(-50%, -50%) scale(1); }
+}
+</style>
+
+<script>
+const btn = document.getElementById('sendBtn');
+const popup = document.getElementById('popup');
+
+btn.addEventListener('click', function(e) {
+  e.preventDefault(); // prevent actual form submit if needed
+
+  // Show popup
+  popup.classList.add('show');
+
+  // Hide popup after 2 seconds
+  setTimeout(() => {
+    popup.classList.remove('show');
+  }, 2000);
+});
+</script>
+
 
           </form>
 
