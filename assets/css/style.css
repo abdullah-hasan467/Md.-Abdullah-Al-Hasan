@@ -544,7 +544,8 @@ main {
 
 .service-icon-box img { margin: auto; }
 
-.service-content-box { text-align: center; }
+.service-content-box { text-align: center;
+ }
 
 .service-item-title { margin-bottom: 7px; }
 
@@ -1407,7 +1408,8 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .about .article-title { margin-bottom: 20px; }
 
-  .about-text { margin-bottom: 40px; }
+  .about-text { margin-bottom: 40px;
+  text-align: justify; }
 
   /* service */
 
